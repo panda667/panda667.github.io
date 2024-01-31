@@ -1,0 +1,47 @@
+#for a logo interpreter
+to star
+   repeat 5[
+fd 100
+rt 144
+   ]
+end
+cs
+Ct
+lt 90
+Pu
+fd 200
+rt 90
+Pd
+fd 200
+repeat 3[
+  rt 90
+  fd 100
+]
+rt 180
+repeat 3[
+  fd 100
+  rt 90
+]
+rt 45
+pu
+fd 200
+label "This
+fd 30
+label "is
+fd 20
+label "fun.
+rt 135
+fd 100
+pd
+star
+pu
+fd 150
+lt 90
+label "I
+fd 20
+label "made
+fd 50
+label "a
+fd 20
+label "star.
+fd 200
