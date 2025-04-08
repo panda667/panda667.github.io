@@ -2,7 +2,7 @@ from tkinter import* #import statements
 from tkinter.scrolledtext import*
 import sys
 from Cipher import* #change below path to where Cipher.py is located
-sys.path.append("Cipher.py")
+sys.path.append("panda667.github.io/Cryptography.py")
 root=Tk() #window setup
 c=Canvas(root,width=800,height=600) #basic structure
 label_plain=Label(root,text="Plaintext")
