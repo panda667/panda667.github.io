@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Opossum Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        img {
+            max-width: 292px; /* Set max width for the image */
+            height: auto;
+            margin-bottom: 20px;
+        }
+        #searchInput {
+            width: 90%;
+            max-width: 584px;
+            padding: 10px 15px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            font-size: 16px;
+            outline: none;
+            box-shadow: none;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+        #searchInput:focus {
+            border-color: #4285f4;
+            box-shadow: 0 1px 6px rgba(32,33,36,.28);
+        }
+        .search-buttons {
+            margin-top: 20px;
+        }
+        .search-buttons input[type="submit"] {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            outline: none;
+        }
+        .search-buttons input[type="submit"]:hover {
+            box-shadow: 0 1px 1px rgba(0,0,0,.1);
+            background-color: #f0f0f0;
+            border: 1px solid #c6c6c6;
+            color: #222;
+        }
+        footer {
+            margin-top: auto; /* Push footer to the bottom */
+            padding: 20px;
+            text-align: center;
+            color: #70757a;
+            font-size: 14px;
+            border-top: 1px solid #ebebeb;
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Opossum_2.jpg/292px-Opossum_2.jpg" alt="Opossum Search Logo">
+        <form id="searchForm" onsubmit="return performSearch()">
+            <input type="text" id="searchInput" name="q" title="Search" value="">
+            <div class="search-buttons">
+                <input type="submit" value="Opossum Search">
+            </div>
+        </form>
+    </div>
+    <footer>
+        Powered by opossum search
+    </footer>
+
+    <script>
+        function performSearch() {
+            var query = document.getElementById("searchInput").value;
+            if (query.trim() === "") {
+                // If the search input is empty, still redirect to Google with just "opossum"
+                window.location.href = "https://www.google.com/search?q=opossum";
+            } else {
+                window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query + " opossum");
+            }
+            return false; // Prevent default form submission
+        }
+    </script>
+</body>
+</html>
