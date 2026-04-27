@@ -1,3 +1,5 @@
+I used this license because it's literally the only one I found that's open source, well-known and not a goofy one, but requires all modifications and distributions to be recorded and tracked.
+
 VIM LICENSE
 
 I)  There are no restrictions on distributing unmodified copies of panda667.github.io
